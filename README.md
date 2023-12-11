@@ -4,7 +4,7 @@
 #### By Gabriel Tucker
 
 ## Component Diagram
- ![Diagram of components](src/diagram.drawio.svg)
+ ![Diagram of components](src/test.drawio.svg)
 
 ## Technologies Used
 
