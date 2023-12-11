@@ -5,22 +5,22 @@ import ReusableForm from './ReusableForm';
 function NewItemForm(props) {
     function handleNewItemFormSubmission(e) {
         e.preventDefault();
-        props.onNewItemCreation({
+        const newCoffee = {
             name: e.target.name.value,
             description: e.target.description.value,
             origin: e.target.origin.value,
-            price: parseFloat(e.target.price.value), // Use parseFloat for price
-            roast: e.target.roast.value,
+            price: parseFloat(e.target.price.value),
             qty: parseInt(e.target.quantity.value),
             id: v4(),
             totalBought: 0,
-        });
+        };
+        props.onNewItemCreation(newCoffee);
     }
 
     return (
         <>
             <ReusableForm
-                pageTitle="for adding a coffee type for sale"
+                pageTitle="Add a new coffee type for sale"
                 formSubmissionHandler={handleNewItemFormSubmission}
                 buttonText="Create new coffee"
             />
@@ -31,5 +31,4 @@ function NewItemForm(props) {
 NewItemForm.propTypes = {
     onNewItemCreation: PropTypes.func,
 };
-
 export default NewItemForm;

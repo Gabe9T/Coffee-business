@@ -24,6 +24,7 @@ const ItemsList = (props) => {
             whenItemClicked={props.onItemSelection}
             onBuyPound={props.onBuyPound}
             onSellPound={props.onSellPound}
+            name={coffee.name}
             id={coffee.id}
             description={coffee.description}
             origin={coffee.origin}

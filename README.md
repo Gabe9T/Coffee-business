@@ -31,7 +31,7 @@
 6. type in these commands into git bash($npm install, npm install uuid, npm run dev, o + enter)
 
 ## Known Bugs
-* Create new coffee button needs to be fixed 
+* None as of now.
 
 ## link to old repo
 Problems while pushing, messed up code

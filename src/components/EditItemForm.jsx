@@ -10,7 +10,7 @@ function NewItemForm(props) {
             description: e.target.description.value,
             origin: e.target.origin.value,
             price: e.target.price.value,
-            qty: parseInt(e.target.quantity.value), // Updated field name to match the form
+            qty: parseInt(e.target.quantity.value),
             id: v4(),
         });
     }

@@ -7,6 +7,7 @@ function ItemDetail(props) {
         <>
 
             <h1>{coffee.name}</h1>
+            <p>Name: {coffee.name}</p>
             <p>Description: {coffee.description}</p>
             <p>Price: {coffee.price}</p>
             <p>Quantity: {coffee.qty}</p>
