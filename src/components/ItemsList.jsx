@@ -1,13 +1,16 @@
-import Items from "./Items";
 import PropTypes from 'prop-types';
+import Items from "./Items";
 
 const ItemsList = (props) => {
-
   const itemStyle = {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
+  };
+
+  const boughtItemsListStyle = {
+    width: '20%',
   };
 
   let currentInventory = props.inventory;
@@ -31,6 +34,8 @@ const ItemsList = (props) => {
             key={coffee.id}
           />
         ))}
+      </div>
+      <div style={boughtItemsListStyle}>
       </div>
     </>
   );

@@ -6,7 +6,7 @@ function ReusableForm(props) {
       <form onSubmit={props.formSubmissionHandler}>
         <h3>{props.pageTitle}</h3>
         <label htmlFor="name">Name: </label>
-        <input type="text" name="name" placeholder="Name of New Coffee"/>
+        <input type="text" name="name" placeholder="Name of New Coffee" />
         <br />
         <label htmlFor="description">Description: </label>
         <input

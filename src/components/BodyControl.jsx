@@ -63,19 +63,25 @@ class BodyControl extends React.Component {
             selectedCoffee: null
         });
     }
-    
-handleSellPound = (id) => {
-    const updatedInventory = this.state.mainNewCoffeeList.map((coffee) => {
-        if (coffee.id === id && coffee.totalBought > 0) {
-            return { ...coffee, qty: coffee.qty + 1, totalBought: coffee.totalBought - 1 };
-        }
-        return coffee;
-    });
 
-    this.setState({
-        mainNewCoffeeList: updatedInventory
-    });
-};
+    handleSellPound = (id) => {
+        const updatedInventory = this.state.mainNewCoffeeList.map((coffee) => {
+            if (coffee.id === id && coffee.totalBought > 0) {
+                return { ...coffee, qty: coffee.qty + 1, totalBought: coffee.totalBought - 1 };
+            }
+            return coffee;
+        });
+
+        this.setState({
+            mainNewCoffeeList: updatedInventory
+        });
+
+        this.setState((prevState) => ({
+            boughtItems: prevState.boughtItems
+                .map((item) => (item.id === id && item.totalBought > 0) ? { ...item, totalBought: item.totalBought - 1 } : item)
+                .filter((item) => item.totalBought > 0)
+        }));
+    };
     handleBuyPound = (id) => {
         const updatedInventory = this.state.mainNewCoffeeList.map((coffee) => {
             if (coffee.id === id && coffee.qty > 0) {
@@ -84,18 +90,18 @@ handleSellPound = (id) => {
                     qty: coffee.qty - 1,
                     totalBought: coffee.totalBought + 1,
                 };
-    
+
                 if (updatedCoffee.totalBought > 0) {
                     this.setState((prevState) => ({
                         boughtItems: [...prevState.boughtItems, updatedCoffee],
                     }));
                 }
-    
+
                 return updatedCoffee;
             }
             return coffee;
         });
-    
+
         this.setState({
             mainNewCoffeeList: updatedInventory,
         });
@@ -139,7 +145,7 @@ handleSellPound = (id) => {
                         {currentlyVisibleState}
                         <button onClick={this.handleClick}>{buttonText}</button>
                     </div>
-                    <div style={{ flex: 0.2, borderLeft: '1px solid #ccc', padding: '10px' }}>
+                    <div style={{ width: '20%' }}>
                         <h2>Bought Items</h2>
                         <ul>
                             {this.state.boughtItems.length > 0 &&
@@ -166,4 +172,3 @@ handleSellPound = (id) => {
     }
 }
 export default BodyControl;
-

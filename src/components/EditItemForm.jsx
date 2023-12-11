@@ -1,29 +1,32 @@
-import ReusableForm from "./ReusableForm";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import { v4 } from 'uuid';
+import ReusableForm from './ReusableForm';
 
-function EditItemForm(props) {
-    const { coffee } = props;
-    function handleEditItemSubmission(e) {
+function NewItemForm(props) {
+    function handleNewItemFormSubmission(e) {
         e.preventDefault();
-        props.onEditItem({
+        props.onNewItemCreation({
+            name: e.target.name.value,
             description: e.target.description.value,
+            origin: e.target.origin.value,
             price: e.target.price.value,
-            qty: parseInt(e.target.qty.value),
-            id: coffee.id
+            qty: parseInt(e.target.quantity.value), // Updated field name to match the form
+            id: v4(),
         });
     }
+
     return (
         <>
             <ReusableForm
-                pageTitle="Edit your coffee roast"
-                formSubmissionHandler={handleEditItemSubmission}
-                buttonText="Update Your Coffee" />
+                pageTitle="for adding a coffee type for sale"
+                formSubmissionHandler={handleNewItemFormSubmission}
+                buttonText="Create new coffee" />
         </>
     );
 }
-EditItemForm.propTypes = {
-    coffee: PropTypes.object,
-    onEditItem: PropTypes.func
+
+NewItemForm.propTypes = {
+    onNewItemCreation: PropTypes.func
 };
 
-export default EditItemForm;
+export default NewItemForm;
