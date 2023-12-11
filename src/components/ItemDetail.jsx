@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function ItemDetail(props) {
-    const { coffee, onClickingDelete } = props;
+    const { coffee, onClickingDelete, onClickingEdit } = props;
     return (
         <>
 

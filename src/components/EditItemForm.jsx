@@ -20,7 +20,7 @@ function NewItemForm(props) {
             <ReusableForm
                 pageTitle="for adding a coffee type for sale"
                 formSubmissionHandler={handleNewItemFormSubmission}
-                buttonText="Create new coffee" />
+                buttonText="Update Coffee" />
         </>
     );
 }
