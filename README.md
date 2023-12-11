@@ -19,20 +19,24 @@
 
 1. go to my github repository for the project (https://github.com/gabe9t/projectweek8)
 
+
 2. Click the 'code' button and copy the url for HTTPS.
 
-3. clone project
+3. create new folder
 
-5. type in these ($npm install, npm install uuid, npm run dev, o + enter)
+4. type (npm create vite@latest) use react and javascript 
+
+5. clone project into new folder
+
+6. type in these ($npm install, npm install uuid, npm run dev, o + enter)
 
 ## Known Bugs
 * Create new coffee button needs to be fixed 
-* list needs to go down when you sell an item 
 
 ## link to old repo
 Problems while pushing, messed up code
-cant figure out why it wont display anymore,
-will figure out how to fix it later this week 
+will figure out how to fix it later this week, 
+project is buggy.
 (https://github.com/gabe9t/projectweek82)
 
 
