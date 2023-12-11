@@ -28,7 +28,7 @@
 
 5. clone project into new folder
 
-6. type in these ($npm install, npm install uuid, npm run dev, o + enter)
+6. type in these commands into git bash($npm install, npm install uuid, npm run dev, o + enter)
 
 ## Known Bugs
 * Create new coffee button needs to be fixed 
