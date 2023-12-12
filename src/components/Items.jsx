@@ -22,8 +22,8 @@ const Items = (props) => {
             {props.qty <= 10 && props.qty > 0 && <span> - Almost out!</span>}
           </p>
           <p>Total Bought: {props.totalBought}</p>
-          <button onClick={(e) => { e.stopPropagation(); props.onSellPound(props.id); }}>Sell</button>
           <button onClick={(e) => { e.stopPropagation(); props.onBuyPound(props.id); }}>Buy</button>
+          <button onClick={(e) => { e.stopPropagation(); props.onSellPound(props.id); }}>Sell</button>
         </div>
       </>
     );
