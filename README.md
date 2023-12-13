@@ -3,6 +3,9 @@
 
 #### By Gabriel Tucker
 
+## Component Diagram
+ ![Diagram of components](src/test.drawio.svg)
+
 ## Technologies Used
 
 * Html
@@ -19,16 +22,14 @@
 
 1. go to my github repository for the project (https://github.com/gabe9t/projectweek8)
 
-
 2. Click the 'code' button and copy the url for HTTPS.
 
-3. create new folder
+3. Open Bash and type: <b>`git clone https://github.com/Gabe9T/projectweek8.git`<b>
 
-4. type (npm create vite@latest) use react and javascript 
+4. Open cloned file in VsCode
 
-5. clone project into new folder
+5. to run the Project site Type these commands into terminal: `npm install`, `npm run dev`, `o + enter`
 
-6. type in these commands into git bash($npm install, npm install uuid, npm run dev, o + enter)
 
 ## Known Bugs
 * None as of now.
