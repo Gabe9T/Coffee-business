@@ -41,5 +41,4 @@ Items.propTypes = {
     remainingPounds: PropTypes.number,
     onSellPound: PropTypes.func
 };
-
 export default Items;
