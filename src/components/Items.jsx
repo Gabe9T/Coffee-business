@@ -33,7 +33,7 @@ Items.propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
     origin: PropTypes.string,
-    price: PropTypes.string,
+    price: PropTypes.number,
     roast: PropTypes.string,
     qty: PropTypes.number,
     id: PropTypes.string,
